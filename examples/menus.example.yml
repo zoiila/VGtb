@@ -1,0 +1,19 @@
+# Vgtb — vanilla inventory menu layout EXCERPT
+# Do not replace the complete generated menus.yml.
+# Only adjust supported entries on a matching licensed build.
+# Inventory slots are zero-based. A 27-slot inventory accepts slots 0–26.
+# Keep the theme choice slot count equal to game.theme-options in config.yml.
+
+menus:
+  menu:
+    title: menu_title
+    size: 45
+    filler:
+      enabled: false
+      material: BLACK_STAINED_GLASS_PANE
+      slots: []
+
+  theme:
+    title: theme_title
+    size: 27
+    choice-slots: [11, 13, 15]

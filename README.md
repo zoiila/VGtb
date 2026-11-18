@@ -61,6 +61,19 @@ A well-prepared Vgtb arena makes building easy to follow and guessing enjoyable.
 
 Before inviting a full lobby, walk through the experience with a small group. Make sure that players have safe spawn locations, spectators can follow the builder without interrupting, and the next round can begin smoothly.
 
+## Configuration examples
+
+Want to explore the available gameplay, arena, UI and message settings? The [configuration examples](examples/README.md) show **selected YAML options** without exposing Vgtb's private source code.
+
+| Example | Explore |
+| --- | --- |
+| [Gameplay & UI](examples/config.example.yml) | Match sizes, round timing, scoreboard presentation and audio defaults |
+| [Manual arena](examples/manual-arena.example.yml) | How existing worlds and manually prepared arenas are represented |
+| [Messages](examples/messages.example.yml) | English player-facing announcements and placeholders |
+| [Menus](examples/menus.example.yml) | Inventory layout and builder theme-selection slots |
+
+These are **reference snippets, not full replacement files**. Actual arena positions, private assets and complete version-specific defaults remain outside the public repository.
+
 ## Optional companion features
 
 Vgtb includes a standard cosmetic inventory. Companion plugins can extend the presentation and game atmosphere:

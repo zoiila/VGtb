@@ -1,0 +1,15 @@
+# Vgtb — manual arena configuration FRAGMENT
+# Do not save this as a runtime arenas.yml: arena configuration belongs
+# inside the installed plugin's config.yml.
+#
+# This illustration selects manual world management for arena 1.
+# It does not provide waiting, lobby, game, spectator or plot coordinates.
+# Keep any real positions already configured by the server administrator.
+
+arenas:
+  '1':
+    world-provider:
+      mode: manual
+
+# To prepare another arena, adapt only the selected arena's world-provider.
+# Never replace existing arenas.<id>.locations or arenas.<id>.plot data.
