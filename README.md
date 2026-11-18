@@ -121,3 +121,4 @@ Copyright © 2026 VACK STUDIO. All rights reserved.
 The plugin, documentation and original artwork are proprietary. Redistribution, modification or publication require written authorization from VACK STUDIO. Third-party components retain their respective rights.
 
 </details>
+
