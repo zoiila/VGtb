@@ -1,0 +1,14 @@
+# Vgtb — English message customization EXCERPT
+# These are selected keys only; do not replace the complete generated messages.yml.
+# Color tokens such as {accent} resolve through the installed plugin's UI palette.
+# Keep numbered placeholders ({1}, {2}, {3}) in the order expected by each key.
+
+joined: '{value}{1} {text}joined the match. {muted}({2}/{3})'
+turn: '{accent}YOUR TURN!'
+turn_sub: '{text}Choose one of {@theme-options} themes'
+building_announce: '{value}{1} {text}is building. Guess in chat!'
+correct_announce: '{accent}{1} guessed correctly! {subtle}(+{2} points)'
+answer: '{text}The theme was {accent}{1}{text}!'
+good_game: '{accent}GOOD GAME!'
+bar_wait: '{muted}Waiting for players: {value}{1}/{2}'
+hud_title: '{gold}Guess the Build'
