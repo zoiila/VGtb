@@ -2,7 +2,7 @@
   <img src="assets/vgtb-01-cover.svg" alt="Vgtb Minecraft Guess The Build by VACK STUDIO — brand cover" width="100%" />
 </p>
 
-# Vgtb <img src="assets/emoji/mini-zoiila-wave.png" alt="Mini Zoiila" width="29" height="29" />
+# Vgtb
 
 **Build the clue. Guess the word.**
 
@@ -30,31 +30,24 @@ These are real Minecraft screenshots captured from the minigame, not reconstruct
 ## Configuration and tips
 
 <p align="center">
-  <img src="assets/vgtb-04-config-notes.svg" alt="Verified Vgtb admin setup commands and arena configuration guidance" width="100%" />
+  <img src="assets/vgtb-04-config-notes.svg" alt="Vgtb arena configuration and practical tips — no command listings" width="100%" />
 </p>
 
-Vgtb uses **existing Minecraft worlds and manually positioned arenas**; it does not generate maps or worlds. Stand at the relevant position and configure the selected arena:
+Vgtb uses **existing Minecraft worlds and six manually configured arenas**. It does not generate maps or worlds. Prepare each arena with safe player locations and a clearly defined building area.
 
-```text
-/gb setwaiting <arena>
-/gb setlobby <arena>
-/gb setgame <arena>
-/gb setspectator <arena>
-/gb setpos1 <arena>
-/gb setpos2 <arena>
-```
+### Arena preparation
 
-Set waiting, lobby, game and spectator positions, as well as the two opposing corners of the play area. Administrative setup and `/gb pack` diagnostics require **`gb.admin`**.
+- **Choose a safe world:** Keep the play area and surrounding space ready for a complete match.
+- **Define player locations:** Set separate waiting, lobby, game and spectator positions.
+- **Keep build boundaries clear:** Mark the opposite corners of each intended building area.
+- **Plan the match flow:** Check that players can enter, spectate and return safely.
 
-### Player commands
+### Helpful admin tips
 
-| Action | Command |
-| --- | --- |
-| Join a specific arena | `/gb1` through `/gb6` |
-| Join a capacity queue | `/gb game 4`, `/gb game 8`, `/gb game 16` |
-| Join queue and arena | `/gb game 4 2` |
-| Select language | `/gb language`, `/gb language en`, `/gb language ar` |
-| Leave a match | `/gb leave` |
+- Test the arena with multiple players before opening it publicly.
+- Confirm that spectators cannot interfere with the active builder.
+- Check spawn safety, arena limits and the return flow after each round.
+- Verify the available player capacities and waiting areas match your server setup.
 
 ## Companion integrations
 
