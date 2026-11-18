@@ -1,49 +1,120 @@
 <p align="center">
-  <img src="./VGuessTheBuild-banner.svg" alt="VGuessTheBuild — Vack Studio" width="100%">
+  <img src="assets/vgtb-01-hero.jpg" alt="Vgtb by VACK STUDIO: Build the clue, guess the word — with a real in-game arena screenshot" width="100%" />
 </p>
 
-# VGuessTheBuild | Vack Studio
+# Vgtb <img src="assets/emoji/mini-zoiila-wave.png" alt="Mini Zoiila waving" width="29" height="29" />
 
-A building and guessing minigame with six manually configured Minecraft arenas. Version **1.8.0**. The product name is consistently **VGuessTheBuild**; **VMusic** and **VPackEngine** remain separate companion plugins.
+**Build the clue. Guess the word.**
 
-## Gameplay and entry
+**Vgtb** is a Minecraft Guess The Build minigame by **VACK STUDIO**. Take a turn as the builder, choose a theme, then turn blocks into clues while other players guess through chat. The game tracks rounds, hints and scores across **six manually configured arenas**.
 
-- Direct arena commands `/gb1` through `/gb6`, including `/gb2`; joining opens no general menu.
-- Separate capacity queues through `/gb game 4`, `/gb game 8`, `/gb game 16` or `/gb game 4 2`. Default configured sizes are 4, 6, 8 and 16 with 75% start thresholds of 3, 5, 6 and 12.
-- Random builder turns, chat topic selection, guesses, hints and scoring. The inventory interface is reserved for cosmetics.
-- English and العربية, selected explicitly through `/gb language` or `/gb language en|ar`, with saved UUID preferences.
-- Player state restoration, existing rewards and cosmetic transactions.
-- Optional VMusic 1.7.0 native NBS waiting loop and cues; native audio fallback remains available.
-- Existing worlds and manually positioned arenas. No map or world generation is supplied.
+> [!IMPORTANT]
+> **Commercial plugin.** Vgtb is proprietary software. This public repository contains product information, not the source code or a downloadable JAR. Builds are distributed privately by VACK STUDIO under authorization.
 
-## VPackEngine integration
+## From queue to your turn
 
-VGuessTheBuild uses VPackEngine's public service and guarded menu events. Its 1.1.0-preview.2 context API supports waiting/game profiles, per-arena overrides, a cosmetic profile, current-session resource readiness and removal of game-owned contexts on exit. Closing the cosmetic menu removes its higher-priority context. Delayed or superseded results cannot reopen a stale menu.
+<p align="center">
+  <img src="assets/vgtb-02-round-flow.jpg" alt="Actual Vgtb queue messages, theme-selection chat and Your Turn title" width="100%" />
+</p>
 
-Cosmetics choose separate English/Arabic engine menus according to the game's saved language and reuse the existing purchases and prices. Missing engines, unavailable resources or menus use the standard cosmetic inventory. The older engine API can open already-ready menus, but does not automatically apply profiles that it cannot remove. Pack requirements remain administrator-configured in VPackEngine; the integration itself does not force downloads or create artwork.
+**How does a round begin?** <img src="assets/emoji/mini-zoiila-thinking.png" alt="Mini Zoiila thinking" width="24" height="24" />
 
-## Requirements and setup
+Players enter an arena or a capacity queue. When a builder's turn arrives, the game presents theme choices and a limited selection window. The builder picks a topic and starts constructing it in the arena; everyone else watches for the answer.
 
-Target: **Paper 26.2 build 133 / Java 25**. Optional integrations: **VPackEngine 1.1.0-preview.2** for owned profiles, **VMusic 1.7.0** for its waiting track and **VHeads 1.0.1** for head management. Leaf, Folia and Bedrock compatibility are unverified.
+## The build phase
 
-Stand at each chosen location and run `/gb setwaiting <arena>`, `/gb setlobby <arena>`, `/gb setgame <arena>` and `/gb setspectator <arena>`. Use `/gb setpos1 <arena>` and `/gb setpos2 <arena>` for bounds. Administrative setup and `/gb pack` diagnostics require `gb.admin`. VPackEngine menus require `vpack.use`.
+<p align="center">
+  <img src="assets/vgtb-03-build-phase.jpg" alt="Real Minecraft Vgtb build round with in-game timer, builder and scoreboard" width="100%" />
+</p>
 
-Configure profile/menu names under `integrations.vpackengine`, create those profiles in the engine and merge the supplied bilingual cosmetic menu examples into its existing configuration. Reload each plugin with arenas empty. Rewards, prices, SQLite data, UUID languages, snapshots and arena coordinates preserve their identities.
+A player builds the selected theme in an existing world while opponents submit guesses in chat. Hints and scoring keep the round moving, and builder turns rotate through the match.
 
-## Verification
+## In-game cues
 
-Private Java 25 CI built the real plugin and passed **24 tests** with zero failures, errors or skips, including API compatibility, owned context removal operations, readiness/failure forwarding, UUID request isolation, supersession and lifecycle invalidation. JAR inspection confirms Java 25 bytecode, the VPackEngine soft dependency and no bundled Paper or VPackEngine API classes. Compilation/service checks do not prove real-client resource downloads, visual rendering, audible playback or multiplayer cleanup; those require two connected clients and the owner's plugin stack. No live server was modified in this update.
+<p align="center">
+  <img src="assets/vgtb-04-ingame-cues.jpg" alt="Real Vgtb chat theme selection, Your Turn title and Get ready screen" width="100%" />
+</p>
 
-## العربية
+Vgtb communicates the essentials through in-game chat, titles, the round timer and the scoreboard. Player language preferences support **English and Arabic**, selected with `/gb language` and saved per player.
 
-**VGuessTheBuild** هو الاسم الموحّد للبلوجن من **Vack Studio**، وإصداره **1.8.0**. الدخول مباشر بـ`/gb2` أو `/gb game 4 2`، والـGUI مخصص للتجميل. لا يوجد ماب؛ تحدد مواقع الساحات الست بنفسك.
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Theme selection</strong>
+      <img src="assets/screenshots/theme-chat.jpg" alt="Vgtb chat listing Cookie, Sword and Computer as theme choices" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <strong>Get ready</strong>
+      <img src="assets/screenshots/get-ready.jpg" alt="Zoiila in a Minecraft Vgtb arena with the Get ready message" width="100%" />
+    </td>
+  </tr>
+</table>
 
-التكامل مع **VPackEngine** يربط بروفايلات باكات الانتظار واللعبة لكل ساحة، ويفتح قائمة التجميل بالعربية أو الإنجليزية حسب لغة اللاعب المحفوظة. يحتاج الربط الكامل إصدار المحرك **1.1.0-preview.2**. إذا الباك أو القائمة غير جاهزين تظهر القائمة العادية، وعند الخروج تُزال سياقات الباكات الخاصة باللعبة. الأسعار والجوائز وبيانات اللاعبين محفوظة كما هي.
+## Enter a game
 
-اجتاز الإصدار 24 اختبارًا والبناء على Java 25. تجربة الباكات والشكل والصوت مع لاعبين متصلين ما زالت مطلوبة؛ اختبارات الكود لا تعني اكتمال اختبار اللعب الفعلي.
+| Action | Command |
+| --- | --- |
+| Enter a specific arena | `/gb1` through `/gb6` |
+| Join a capacity queue | `/gb game 4`, `/gb game 8` or `/gb game 16` |
+| Select queue and arena | `/gb game 4 2` |
+| Change language | `/gb language`, `/gb language en` or `/gb language ar` |
+| Leave a match | `/gb leave` |
 
-## Availability and rights
+Configured game sizes are **4, 6, 8 and 16** players. Their default start thresholds are **3, 5, 6 and 12**, respectively.
 
-This repository is an introduction only. Source, plugin binaries, checksums and download releases are not published here. The owner supplies compiled files privately.
+## Set up arenas
 
-Copyright (c) Vack Studio. All rights reserved. Third-party components retain their own rights.
+Vgtb uses **existing Minecraft worlds and administrator-positioned arenas**. It does not generate maps or worlds. At each chosen location, use the arena setup commands to define its waiting, lobby, game and spectator points, followed by the play-area bounds.
+
+```text
+/gb setwaiting <arena>
+/gb setlobby <arena>
+/gb setgame <arena>
+/gb setspectator <arena>
+/gb setpos1 <arena>
+/gb setpos2 <arena>
+```
+
+Define every position and both boundary corners before opening an arena to players. <img src="assets/emoji/mini-zoiila-teacher.png" alt="Mini Zoiila explaining" width="24" height="24" />
+
+Admin setup and `/gb pack` diagnostics require `gb.admin`. Resource-pack menus supplied by VPackEngine require `vpack.use`.
+
+## Companion integrations
+
+Vgtb can run with its standard cosmetic inventory. Optional companion plugins add resource-pack profiles, menus, music and player heads.
+
+| Companion | Integration |
+| --- | --- |
+| **VPackEngine 1.1.0-preview.2** | Waiting/game pack profiles, per-arena overrides, language-specific cosmetic menus and safe context cleanup |
+| **VMusic 1.7.0** | Optional NBS waiting-room track and game cues, with native audio fallback |
+| **VHeads 1.0.1** | Optional head management |
+
+When VPackEngine or an expected menu/pack is unavailable, the standard cosmetic inventory remains available. Pack delivery is configured in VPackEngine rather than being forced by Vgtb.
+
+## Requirements and verification
+
+| Item | Version or status |
+| --- | --- |
+| Publicly documented Vgtb version | **1.8.0** |
+| Target server | **Paper 26.2 build 133** |
+| Java | **Java 25** |
+| Maps | **Six manually configured arenas** |
+| Leaf / Folia / Bedrock | **Not verified** |
+
+A previously reported private Java 25 CI run built the plugin and passed **24 tests**, covering integration contexts, resource readiness, request isolation and lifecycle invalidation. Those results are build/service checks: full live multiplayer acceptance, pack rendering, audio and cleanup still require in-game verification.
+
+## Availability
+
+Vgtb is privately distributed software by **VACK STUDIO**. Contact VACK STUDIO for availability and written terms.
+
+<p align="center">
+  <a href="https://builtbybit.com/members/vack-studio.891381/#latest-activity">BuiltByBit</a>
+  &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+  <a href="https://discord.gg/y45brtZBEE">Discord</a>
+</p>
+
+<p align="center">
+  <img src="assets/vgtb-05-vack-studio.jpg" alt="Built for the next guess — Vgtb by VACK STUDIO" width="100%" />
+</p>
+
+<p align="center"><sub>Copyright © 2026 VACK STUDIO. All rights reserved. Third-party components retain their respective rights.</sub></p>
