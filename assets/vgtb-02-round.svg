@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="392" viewBox="0 0 1440 392" role="img" aria-labelledby="title desc">
+<title id="title">Vgtb gameplay loop</title><desc id="desc">A player builds a selected topic, other players guess in chat, and scores are awarded.</desc>
+<rect width="1440" height="392" fill="#1B2029"/>
+<rect x="48" y="48" width="1344" height="297" rx="3" fill="#222934" stroke="#475161" stroke-width="2"/>
+<path d="M48 48H1392" stroke="#BCA0E5" stroke-width="4"/>
+<text x="85" y="96" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#C7ADEB">ONE ROUND  /  THREE MOMENTS</text>
+<path d="M163 179H1299" stroke="#647083" stroke-width="4" opacity=".75"/>
+<g font-family="Inter,Arial,sans-serif">
+<rect x="159" y="159" width="39" height="39" fill="#BFA0E9" stroke="#222934" stroke-width="7"/>
+<rect x="687" y="159" width="39" height="39" fill="#E9C789" stroke="#222934" stroke-width="7"/>
+<rect x="1215" y="159" width="39" height="39" fill="#95C8C6" stroke="#222934" stroke-width="7"/>
+<text x="155" y="148" font-size="20" font-weight="750" fill="#BFA0E9">01</text>
+<text x="685" y="148" font-size="20" font-weight="750" fill="#E9C789">02</text>
+<text x="1213" y="148" font-size="20" font-weight="750" fill="#95C8C6">03</text>
+<text x="154" y="249" font-size="38" font-weight="730" fill="#F1F3F7">BUILD</text>
+<text x="683" y="249" font-size="38" font-weight="730" fill="#F1F3F7">GUESS</text>
+<text x="1210" y="249" font-size="38" font-weight="730" fill="#F1F3F7">SCORE</text>
+<text x="154" y="288" font-size="21" fill="#BBC3CF">A builder takes a turn.</text>
+<text x="683" y="288" font-size="21" fill="#BBC3CF">Others answer in chat.</text>
+<text x="1120" y="288" font-size="21" fill="#BBC3CF">Points decide the round.</text>
+</g>
+</svg>
