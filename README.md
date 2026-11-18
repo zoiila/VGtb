@@ -110,13 +110,13 @@ Vgtb is **commercial software** by VACK STUDIO. Contact the studio for private b
 ---
 
 <p align="center">
-  <img src="assets/vgtb-05-studio-signature.svg" alt="Proudly crafted by VACK STUDIO — BUILT BY BUILT" width="100%" />
+  <img src="assets/vgtb-05-studio-signature.svg" alt="Proudly crafted by VACK STUDIO, BuiltByBit and Discord links, with Signature #02 — Zoiila chases Chick" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://builtbybit.com/members/vack-studio.891381/#latest-activity">BuiltByBit</a>
+  <a href="https://builtbybit.com/members/vack-studio.891381/#latest-activity"><img src="assets/builtbybit-mark.svg" alt="BuiltByBit" width="20" height="20" /> BuiltByBit</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://discord.gg/y45brtZBEE">Discord</a>
+  <a href="https://discord.gg/y45brtZBEE"><img src="assets/discord-mark.svg" alt="Discord" width="20" height="20" /> Discord</a>
 </p>
 
 <details>
