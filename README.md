@@ -11,7 +11,7 @@
 > [!IMPORTANT]
 > **Commercial plugin.** Vgtb is proprietary software. This public repository provides product information, not the source code or a downloadable JAR. Builds are distributed privately under authorization.
 
-## How the game works
+## How Vgtb works
 
 <p align="center">
   <img src="assets/vgtb-02-plugin-info.svg" alt="Plugin information: join, select a theme, build and guess" width="100%" />
@@ -19,7 +19,7 @@
 
 One player is selected as the builder, chooses a theme and starts placing clues. Everyone else tries to identify the theme through chat as rounds and scores advance. Vgtb supports **six manually configured arenas** in existing worlds, **4/6/8/16-player** capacities, and saved **English and Arabic** language preferences. The default minimum start thresholds are **3/5/6/12**, respectively.
 
-## In-game screenshots
+## Real in-game screenshots
 
 <p align="center">
   <img src="assets/vgtb-03-real-gameplay.svg" alt="Authentic Vgtb Minecraft gameplay: build arena, Your Turn, and Get ready" width="100%" />
