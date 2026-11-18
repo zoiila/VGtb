@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/vgtb-01-cover.svg" alt="Vgtb by VACK STUDIO, with one original Blockbench Mini Zoiila pose looking over the hero frame" width="100%" />
+  <img src="assets/vgtb-01-cover.svg" alt="Vgtb by VACK STUDIO, with Mini Zoiila Top Peek pose from the approved Edge Mascot Pose Collection, looking over the hero frame" width="100%" />
 </p>
 
 # Vgtb <img src="assets/emoji/mini-zoiila-wave.png" alt="Mini Zoiila waving" width="29" height="29" />
