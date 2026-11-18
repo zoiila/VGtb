@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/vgtb-01-cover.svg" alt="Vgtb by VACK STUDIO — Minecraft Guess The Build, with Mini Zoiila climbing the frame" width="100%" />
+  <img src="assets/vgtb-01-cover.svg" alt="Vgtb by VACK STUDIO, with one original Blockbench Mini Zoiila pose looking over the hero frame" width="100%" />
 </p>
 
 # Vgtb <img src="assets/emoji/mini-zoiila-wave.png" alt="Mini Zoiila waving" width="29" height="29" />
@@ -110,7 +110,7 @@ Vgtb is **commercial software** by VACK STUDIO. Contact the studio for private b
 ---
 
 <p align="center">
-  <img src="assets/vgtb-05-studio-signature.svg" alt="Proudly crafted by VACK STUDIO, with Mini Zoiila and Chick in a signature pose" width="100%" />
+  <img src="assets/vgtb-05-studio-signature.svg" alt="Proudly crafted by VACK STUDIO — BUILT BY BUILT" width="100%" />
 </p>
 
 <p align="center">
